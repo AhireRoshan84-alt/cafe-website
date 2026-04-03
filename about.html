@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Café Bliss</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <h1 class="logo">☕ Café Bliss</h1>
+        <button id="theme-toggle">🌙</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="cart" onclick="toggleCart()">
+    🛒 <span id="cart-count">0</span>
+</div>
+    </nav>
+</header>
+
+<section class="about">
+    <h2>About Our Café</h2>
+    <p>
+        Welcome to Café Bliss! We serve freshly brewed coffee, delicious snacks, 
+        and desserts in a cozy environment. Our goal is to create a place where 
+        people can relax, work, and enjoy great food.
+    </p>
+</section>
+<div id="cart-popup" class="cart-popup">
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Total Items: 0</p>
+    <button onclick="toggleCart()">Close</button>
+</div>
+ <script src="js/script.js"></script>
+</body>
+</html>

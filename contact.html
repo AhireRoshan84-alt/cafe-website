@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Café Bliss</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 🔹 Navbar -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">☕ Café Bliss</h1>
+            <button id="theme-toggle">🌙</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="cart" onclick="toggleCart()">
+    🛒 <span id="cart-count">0</span>
+</div>
+        </nav>
+    </header>
+
+    <!-- 🔹 Contact Section -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+
+        <div class="contact-container">
+
+            <!-- Info -->
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>📍 Dhule, Maharashtra</p>
+                <p>📞 +91 9876543210</p>
+                <p>📧 cafébliss@email.com</p>
+            </div>
+
+            <!-- Form -->
+                <form class="contact-form" onsubmit="return validateForm()">
+
+                    <input type="text" id="name" placeholder="Your Name">
+                    <small id="name-error" class="error"></small>
+
+                    <input type="email" id="email" placeholder="Your Email">
+                    <small id="email-error" class="error"></small>
+
+                    <textarea id="message" placeholder="Your Message" rows="5"></textarea>
+                    <small id="message-error" class="error"></small>
+
+                    <button type="submit">Send Message</button>
+
+                    <p id="success-msg" class="success"></p>
+
+                </form>
+
+        </div>
+    </section>
+    <div id="cart-popup" class="cart-popup">
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Total Items: 0</p>
+    <button onclick="toggleCart()">Close</button>
+</div>
+ <script src="js/script.js"></script>
+</body>
+</html>

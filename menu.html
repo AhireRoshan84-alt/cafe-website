@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Café Bliss</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 🔹 Navbar (same as index.html) -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">☕ Café Bliss</h1>
+            <button id="theme-toggle">🌙</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="cart" onclick="toggleCart()">
+    🛒 <span id="cart-count">0</span>
+</div>
+        </nav>
+    </header>
+
+    <!-- 🔹 Menu Section -->
+    <section class="menu">
+        <h2>Our Menu</h2>
+        <div class="filter-buttons">
+    <button onclick="filterMenu('all')">All</button>
+    <button onclick="filterMenu('coffee')">Coffee</button>
+    <button onclick="filterMenu('snacks')">Snacks</button>
+    <button onclick="filterMenu('desserts')">Desserts</button>
+</div>
+
+        <!-- Categories -->
+        <div class="menu-category">
+            <h3>☕ Coffee</h3>
+
+            <div class="menu-items">
+                <div class="menu-card coffee">
+                    <img src="images/g1.jpg" alt="Espresso">
+                    <h4>Espresso</h4>
+                    <p>₹120</p>
+                    <button onclick="addToCart('Espresso')">Add to Cart</button>
+                </div>
+
+                <div class="menu-card coffee">
+                    <img src="images/g2.jpg" alt="Latte">
+                    <h4>Latte</h4>
+                    <p>₹180</p>
+                    <button onclick="addToCart('Latte')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-category">
+            <h3>🍔 Snacks</h3>
+
+            <div class="menu-items">
+                <div class="menu-card snacks">
+                    <img src="images/g3.jpg" alt="Burger">
+                    <h4>Burger</h4>
+                    <p>₹150</p>
+                    <button onclick="addToCart('Burger')">Add to Cart</button>
+                </div>
+
+                <div class="menu-card snacks">
+                    <img src="images/g4.jpg" alt="Sandwich">
+                    <h4>Sandwich</h4>
+                    <p>₹130</p>
+                    <button onclick="addToCart('Sandwich')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-category">
+            <h3>🍰 Desserts</h3>
+
+            <div class="menu-items">
+                <div class="menu-card desserts">
+                    <img src="images/g5.jpg" alt="Cake">
+                    <h4>Chocolate Cake</h4>
+                    <p>₹200</p>
+                    <button onclick="addToCart('Chocolate Cake')">Add to Cart</button>
+                </div>
+
+                <div class="menu-card desserts">
+                    <img src="images/g6.jpg" alt="Ice Cream">
+                    <h4>Ice Cream</h4>
+                    <p>₹100</p>
+                    <button onclick="addToCart('Ice Cream')">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <div id="cart-popup" class="cart-popup">
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Total Items: 0</p>
+    <button onclick="toggleCart()">Close</button>
+</div>
+ <script src="js/script.js"></script>
+</body>
+</html>

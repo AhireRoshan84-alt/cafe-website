@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Bliss</title>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 🔹 Navbar -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">☕ Café Bliss</h1>
+                <button id="theme-toggle">🌙</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="cart" onclick="toggleCart()">
+    🛒 <span id="cart-count">0</span>
+</div>
+        </nav>
+    </header>
+
+    <!-- 🔹 Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Fresh Coffee Everyday</h2>
+            <p>Experience the best coffee in town</p>
+            <a href="menu.html" class="btn">View Menu</a>
+        </div>
+    </section>
+
+    <!-- 🔹 Featured Section -->
+    <section class="featured">
+        <h2>Our Specials</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Espresso</h3>
+                <p>Strong and bold coffee</p>
+            </div>
+
+            <div class="card">
+                <h3>Cold Coffee</h3>
+                <p>Chilled and refreshing</p>
+            </div>
+
+            <div class="card">
+                <h3>Chocolate Cake</h3>
+                <p>Rich and delicious</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🔹 Footer -->
+    <footer>
+        <p>© 2026 Café Bliss | All Rights Reserved</p>
+    </footer>
+    <div id="cart-popup" class="cart-popup">
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Total Items: 0</p>
+    <button onclick="toggleCart()">Close</button>
+</div>
+ <script src="js/script.js"></script>
+</body>
+</html>

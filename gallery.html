@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Café Bliss</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 🔹 Navbar -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">☕ Café Bliss</h1>
+            <button id="theme-toggle">🌙</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+           <div class="cart" onclick="toggleCart()">
+    🛒 <span id="cart-count">0</span>
+</div>
+        </nav>
+    </header>
+
+    <!-- 🔹 Gallery Section -->
+    <section class="gallery">
+        <h2>Our Café Moments</h2>
+
+        <div class="gallery-grid">
+            <img src="images/g1.jpg" onclick="openLightbox(this)">
+            <img src="images/g2.jpg" onclick="openLightbox(this)">
+            <img src="images/g3.jpg" onclick="openLightbox(this)">
+            <img src="images/g4.jpg" onclick="openLightbox(this)">
+            <img src="images/g5.jpg" onclick="openLightbox(this)">
+            <img src="images/g6.jpg" onclick="openLightbox(this)">
+        </div>
+    </section>
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">×</span>
+    <img id="lightbox-img">
+</div>
+<div id="cart-popup" class="cart-popup">
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Total Items: 0</p>
+    <button onclick="toggleCart()">Close</button>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
